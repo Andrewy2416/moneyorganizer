@@ -1,6 +1,6 @@
 let db;
-
-const request = indexedDB.open('bugget_tracker', 1);
+// creates a connection to budget_tracker and it's first version
+const request = indexedDB.open('budget_tracker', 1);
 
 //creating new table
 request.onupgradeneeded = function(event) {
@@ -8,7 +8,7 @@ request.onupgradeneeded = function(event) {
   db.createObjectStore('new_transaction', { autoIncrement: true });
 };
 
-
+//function if it works
 request.onsuccess = function(event) {
 
   db = event.target.result;

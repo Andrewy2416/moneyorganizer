@@ -1,3 +1,4 @@
+//variables for the application
 const APP_PREFIX = 'BudgetTracker-';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
@@ -18,6 +19,7 @@ const FILES_TO_CACHE = [
     "./manifest.json"
 ]
 
+//function that installs the cache
 self.addEventListener('fetch', function (e) {
   console.log('fetch request : ' + e.request.url)
   e.respondWith(
@@ -45,7 +47,7 @@ self.addEventListener('install', function (e) {
     )
 
 })
-
+//function that activates and filters the list
 self.addEventListener('activate', function(e) {
     e.waitUntil(
       caches.keys().then(function(keyList) {

@@ -1,3 +1,4 @@
+//required packages for the app
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
@@ -16,6 +17,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+//connect to mongoose database
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   //useFindAndModify: false
