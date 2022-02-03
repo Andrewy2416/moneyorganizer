@@ -21,7 +21,7 @@
 3. Install node dependencies mentioned above or found in the package.json
   
 ## Usage
-  1. Use the terminal to start the app with "npm start".
+  1. Use the terminal to start the app with "node server".
   2. The port used in the server.js is localhost:3001
 
   If you want to use this app with the database being in the cloud use the following link of the app hosted on Heroku: https://stormy-peak-38446.herokuapp.com/
